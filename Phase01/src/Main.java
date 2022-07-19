@@ -30,7 +30,32 @@ public class Main {
         Set<Integer> optionals = new HashSet<>();
         Set<Integer> avoids = new HashSet<>();
 
+        searchNecessaries(necessary, necessaries, invertedIndexMap);
+        searchOptionals(optional, optionals, invertedIndexMap);
+        searchAvoids(avoided, avoids, invertedIndexMap);
 
+
+        optionals.addAll(necessaries);
+        optionals.removeAll(avoids);
+
+        return optionals;
+    }
+
+    private static void searchAvoids(ArrayList<String> avoided, Set<Integer> avoids, HashMap<String, Set<Integer>> invertedIndexMap) {
+        for (String s : avoided) {
+            if (invertedIndexMap.containsKey(s))
+                avoids.addAll(invertedIndexMap.get(s));
+        }
+    }
+
+    private static void searchOptionals(ArrayList<String> optional, Set<Integer> optionals, HashMap<String, Set<Integer>> invertedIndexMap) {
+        for (String s : optional) {
+            if (invertedIndexMap.containsKey(s))
+                optionals.addAll(invertedIndexMap.get(s));
+        }
+    }
+
+    private static void searchNecessaries(ArrayList<String> necessary, Set<Integer> necessaries, HashMap<String, Set<Integer>> invertedIndexMap) {
         for (String s : necessary) {
             if (invertedIndexMap.containsKey(s)) {
                 if (necessaries.isEmpty())
@@ -39,21 +64,6 @@ public class Main {
                     necessaries.retainAll(invertedIndexMap.get(s));
             }
         }
-
-        for (String s : optional) {
-            if (invertedIndexMap.containsKey(s))
-                optionals.addAll(invertedIndexMap.get(s));
-        }
-
-        for (String s : avoided) {
-            if (invertedIndexMap.containsKey(s))
-                avoids.addAll(invertedIndexMap.get(s));
-        }
-
-        optionals.addAll(necessaries);
-        optionals.removeAll(avoids);
-
-        return optionals;
     }
 
     private static String[] getInput() {
