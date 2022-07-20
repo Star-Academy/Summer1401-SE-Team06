@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         InvertedIndex invertedIndex = preprocess();
         String[] input = getInput();
         Set<Integer> result = processInputAndSearch(input, invertedIndex);
@@ -70,15 +70,15 @@ public class Main {
         return scanner.nextLine().toUpperCase().split(" ");
     }
 
-    private static InvertedIndex preprocess() throws FileNotFoundException {
+    private static InvertedIndex preprocess() {
         InvertedIndex invertedIndex = new InvertedIndex();
 
-        for (int i = 58043; i < 58156; i++) {
-            FileReader fileReader = new FileReader("Phase01/src/EnglishData/" + i);
-            fileReader.readFile();
-            String document = fileReader.getDocument();
-            invertedIndex.indexDocument(document, i);
-        }
+        FileReader fileReader = new FileReader("Phase01/src/EnglishData/");
+        fileReader.readFiles();
+        HashMap<Integer, String> docNameToContent = fileReader.getDocNameToContent();
+
+        for (Integer i : docNameToContent.keySet())
+            invertedIndex.indexDocument(docNameToContent.get(i), i);
 
         return invertedIndex;
     }
