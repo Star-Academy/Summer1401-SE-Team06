@@ -34,7 +34,6 @@ public class Main {
         searchOptionals(optional, optionals, invertedIndexMap);
         searchAvoids(avoided, avoids, invertedIndexMap);
 
-
         optionals.addAll(necessaries);
         optionals.removeAll(avoids);
 
