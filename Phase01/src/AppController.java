@@ -3,12 +3,11 @@ import java.util.Set;
 public class AppController {
 
     public void run() throws InputException {
-        InvertedIndex invertedIndex = new InvertedIndex();
         FileReader fileReader = new FileReader("Phase01/src/EnglishData/");
-        MakeInvertedIndex makeInvertedIndex = new MakeInvertedIndex(invertedIndex, fileReader);
+        MakeInvertedIndex makeInvertedIndex = new MakeInvertedIndex(fileReader);
 
         makeInvertedIndex.make();
-        invertedIndex = makeInvertedIndex.getInvertedIndex();
+        InvertedIndex invertedIndex = makeInvertedIndex.getInvertedIndex();
 
         IO io = new IO();
         String[] input = io.getInput();

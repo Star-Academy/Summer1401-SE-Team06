@@ -4,8 +4,8 @@ public class MakeInvertedIndex {
     private final InvertedIndex invertedIndex;
     private final FileReader fileReader;
 
-    public MakeInvertedIndex(InvertedIndex invertedIndex, FileReader fileReader) {
-        this.invertedIndex = invertedIndex;
+    public MakeInvertedIndex(FileReader fileReader) {
+        this.invertedIndex = new InvertedIndex();
         this.fileReader = fileReader;
     }
 
