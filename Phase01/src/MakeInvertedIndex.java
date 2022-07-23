@@ -11,10 +11,10 @@ public class MakeInvertedIndex {
 
     public void make() throws InputException {
         fileReader.readFiles();
-        HashMap<Integer, String> docNameToContent = fileReader.getDocNameToContent();
+        HashMap<String, String> docNameToContent = fileReader.getDocNameToContent();
 
-        for (Integer i : docNameToContent.keySet()) {
-            invertedIndex.indexDocument(docNameToContent.get(i), i);
+        for (String docName : docNameToContent.keySet()) {
+            invertedIndex.indexDocument(docNameToContent.get(docName), docName);
         }
     }
 

@@ -7,7 +7,7 @@ public class IO {
         return scanner.nextLine().toUpperCase().split(" ");
     }
 
-    public void print(Set<Integer> set) {
+    public void print(Set<String> set) {
         System.out.println(set);
     }
 }

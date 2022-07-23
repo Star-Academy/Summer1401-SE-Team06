@@ -16,7 +16,7 @@ public class AppController {
         inputProcessor.process(input);
 
         SearchInDocs searchInDocs = new SearchInDocs(invertedIndex.getInvertedIndex());
-        Set<Integer> result = searchInDocs.search(inputProcessor.getNecessary(),
+        Set<String> result = searchInDocs.search(inputProcessor.getNecessary(),
                 inputProcessor.getOptional(), inputProcessor.getAvoided());
 
         io.print(result);

@@ -6,14 +6,14 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class FileReader {
-    private final HashMap<Integer, String> docNameToContent = new HashMap<>();
+    private final HashMap<String, String> docNameToContent = new HashMap<>();
     private final File directory;
 
     public FileReader(String fileAddress) {
         this.directory = new File(fileAddress);
     }
 
-    public HashMap<Integer, String> getDocNameToContent() {
+    public HashMap<String, String> getDocNameToContent() {
         return docNameToContent;
     }
 
@@ -27,7 +27,7 @@ public class FileReader {
     }
 
     private void putInMap(String fileName, String content) {
-        docNameToContent.put(Integer.parseInt(fileName), content);
+        docNameToContent.put(fileName, content);
     }
 
     private String readFile(File file) throws InputException {
