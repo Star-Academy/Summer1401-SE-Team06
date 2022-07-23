@@ -4,10 +4,10 @@ public class AppController {
 
     public void run() throws InputException {
         FileReader fileReader = new FileReader("Phase01/src/EnglishData/");
-        MakeInvertedIndex makeInvertedIndex = new MakeInvertedIndex(fileReader);
+        InvertedIndexMaker invertedIndexMaker = new InvertedIndexMaker(fileReader);
 
-        makeInvertedIndex.make();
-        InvertedIndex invertedIndex = makeInvertedIndex.getInvertedIndex();
+        invertedIndexMaker.make();
+        InvertedIndex invertedIndex = invertedIndexMaker.getInvertedIndex();
 
         IO io = new IO();
         String[] input = io.getInput();

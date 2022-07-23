@@ -1,10 +1,10 @@
 import java.util.HashMap;
 
-public class MakeInvertedIndex {
+public class InvertedIndexMaker {
     private final InvertedIndex invertedIndex;
     private final FileReader fileReader;
 
-    public MakeInvertedIndex(FileReader fileReader) {
+    public InvertedIndexMaker(FileReader fileReader) {
         this.invertedIndex = new InvertedIndex();
         this.fileReader = fileReader;
     }
