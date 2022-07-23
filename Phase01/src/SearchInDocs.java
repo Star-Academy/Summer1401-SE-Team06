@@ -26,25 +26,28 @@ public class SearchInDocs {
 
     private void searchAvoids(ArrayList<String> avoided, Set<Integer> avoids, HashMap<String, Set<Integer>> invertedIndexMap) {
         for (String s : avoided) {
-            if (invertedIndexMap.containsKey(s))
+            if (invertedIndexMap.containsKey(s)) {
                 avoids.addAll(invertedIndexMap.get(s));
+            }
         }
     }
 
     private void searchOptionals(ArrayList<String> optional, Set<Integer> optionals, HashMap<String, Set<Integer>> invertedIndexMap) {
         for (String s : optional) {
-            if (invertedIndexMap.containsKey(s))
+            if (invertedIndexMap.containsKey(s)) {
                 optionals.addAll(invertedIndexMap.get(s));
+            }
         }
     }
 
     private void searchNecessaries(ArrayList<String> necessary, Set<Integer> necessaries, HashMap<String, Set<Integer>> invertedIndexMap) {
         for (String s : necessary) {
             if (invertedIndexMap.containsKey(s)) {
-                if (necessaries.isEmpty())
+                if (necessaries.isEmpty()) {
                     necessaries.addAll(invertedIndexMap.get(s));
-                else
+                } else {
                     necessaries.retainAll(invertedIndexMap.get(s));
+                }
             }
         }
     }
