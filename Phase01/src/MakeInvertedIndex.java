@@ -9,7 +9,7 @@ public class MakeInvertedIndex {
         this.fileReader = fileReader;
     }
 
-    public void make(){
+    public void make() throws InputException {
         fileReader.readFiles();
         HashMap<Integer, String> docNameToContent = fileReader.getDocNameToContent();
 

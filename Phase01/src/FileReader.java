@@ -13,19 +13,31 @@ public class FileReader {
         this.directory = new File(fileAddress);
     }
 
-    public void readFiles() {
+    public HashMap<Integer, String> getDocNameToContent() {
+        return docNameToContent;
+    }
+
+    public void readFiles() throws InputException {
         String content;
         for (File file : Objects.requireNonNull(directory.listFiles())) {
-            try {
-                content = Files.readString(Paths.get(file.getPath())).toUpperCase();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            docNameToContent.put(Integer.parseInt(file.getName()), content);
+            content = readFile(file);
+            String fileName = file.getName();
+            putInMap(fileName, content);
         }
     }
 
-    public HashMap<Integer, String> getDocNameToContent() {
-        return docNameToContent;
+    private void putInMap(String fileName, String content) {
+        docNameToContent.put(Integer.parseInt(fileName), content);
+    }
+
+    private String readFile(File file) throws InputException {
+        String content;
+        try {
+            content = Files.readString(Paths.get(file.getPath())).toUpperCase();
+        } catch (IOException e) {
+            throw new InputException("Problem in Reading files!");
+        }
+
+        return content;
     }
 }

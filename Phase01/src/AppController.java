@@ -2,7 +2,7 @@ import java.util.Set;
 
 public class AppController {
 
-    public void run() {
+    public void run() throws InputException {
         InvertedIndex invertedIndex = new InvertedIndex();
         FileReader fileReader = new FileReader("Phase01/src/EnglishData/");
         MakeInvertedIndex makeInvertedIndex = new MakeInvertedIndex(invertedIndex, fileReader);
