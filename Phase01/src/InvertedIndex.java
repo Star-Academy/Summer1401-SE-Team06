@@ -3,13 +3,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class InvertedIndex {
-    private static final HashMap<String, Set<Integer>> invertedIndex = new HashMap<>();
+    private static final HashMap<String, Set<String>> invertedIndex = new HashMap<>();
 
-    public HashMap<String, Set<Integer>> getInvertedIndex() {
+    public HashMap<String, Set<String>> getInvertedIndex() {
         return invertedIndex;
     }
 
-    public void indexDocument(String document, int docID) {
+    public void indexDocument(String document, String docID) {
         String[] words;
 
         words = document.split(" ");
@@ -18,9 +18,9 @@ public class InvertedIndex {
                 add_word(word, docID);
     }
 
-    private void add_word(String word, int docID) {
+    private void add_word(String word, String docID) {
         boolean wordExists = invertedIndex.containsKey(word);
-        Set<Integer> list;
+        Set<String> list;
 
         if (wordExists) list = invertedIndex.get(word);
         else list = new HashSet<>();
