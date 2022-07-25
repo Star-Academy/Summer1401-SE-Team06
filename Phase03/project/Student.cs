@@ -11,7 +11,7 @@
         public void AddLesson(Lesson lesson)
         {
             Lessons.Add(lesson);
-            AverageGrade = Lessons.Select(x => x.score).Average();
+            AverageGrade = Lessons.Select(x => x.Score).Average();
         }
     }
 }

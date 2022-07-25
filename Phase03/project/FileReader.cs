@@ -29,7 +29,7 @@ public class FileReader
         foreach (var item in scoresJson)
         {
             var student = students.Where(x => x.StudentNumber == (int)item.StudentNumber);
-            student.ElementAt(0).AddLesson(new Lesson { name = item.Lesson, score = item.Score });
+            student.ElementAt(0).AddLesson(new Lesson { Name = item.Lesson, Score = item.Score });
         }
 
         return students;
