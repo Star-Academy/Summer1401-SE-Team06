@@ -1,16 +1,17 @@
-﻿namespace project;
-
-public class Student
+﻿namespace project
 {
-    public int StudentNumber { get; set; }
-    public double AverageGrade { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public List<Lesson> Lessons { get; set; } = new();
-
-    public void AddLesson(Lesson lesson)
+    public class Student
     {
-        Lessons.Add(lesson);
-        AverageGrade = Lessons.Select(x => x.score).Average();
+        public int StudentNumber { get; set; }
+        public double AverageGrade { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public List<Lesson> Lessons{ get; set; } = new();
+
+        public void AddLesson(Lesson lesson)
+        {
+            Lessons.Add(lesson);
+            AverageGrade = Lessons.Select(x => x.Score).Average();
+        }
     }
 }
