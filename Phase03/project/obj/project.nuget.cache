@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5VJW9BZl/h+rsEvr4GVlMp8UsoQ/K22Z8JaBMdCN49AjKMfUKtVEr1F/JAYj42molKOk6lj25glIbsL3L9KwUA==",
+  "dgSpecHash": "DESpYysrq9nqKlXIgv1jAgO/q85H/RAbK6K9kkT8IAG0eIsb++/LACea1qI9ctjLoo1xkig/UMphYkXz3Wrc3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alibn\\source\\repos\\project\\project\\project.csproj",
+  "projectFilePath": "C:\\Users\\User\\RiderProjects\\Phase03\\project\\project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alibn\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

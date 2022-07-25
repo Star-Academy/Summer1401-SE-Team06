@@ -48,26 +48,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alibn\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alibn\\source\\repos\\project\\project\\project.csproj",
+      "projectUniqueName": "C:\\Users\\User\\RiderProjects\\Phase03\\project\\project.csproj",
       "projectName": "project",
-      "projectPath": "C:\\Users\\alibn\\source\\repos\\project\\project\\project.csproj",
-      "packagesPath": "C:\\Users\\alibn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alibn\\source\\repos\\project\\project\\obj\\",
+      "projectPath": "C:\\Users\\User\\RiderProjects\\Phase03\\project\\project.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\RiderProjects\\Phase03\\project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alibn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
