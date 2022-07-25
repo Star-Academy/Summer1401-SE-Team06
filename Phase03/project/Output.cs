@@ -10,8 +10,8 @@ public class Output
             var student = sortedStudents.ElementAt(i);
             var name = student.FirstName + " " + student.LastName;
             var averageScore = student.AverageGrade;
-
-            Console.WriteLine("Name: " + name + " | Average Score: " + averageScore);
+            var rank = i + 1;
+            Console.WriteLine("Rank " + rank + ": <<" + "Name: " + name + " | Average Score: " + averageScore + ">>");
             Console.WriteLine();
         }
     }

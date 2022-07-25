@@ -1,9 +1,11 @@
 namespace project;
 
-public class RunProgram
+public class ProgramController
 {
-    public void Run(FileReader fileReader, Output output)
+    public void Run()
     {
+        var fileReader = new FileReader();
+        var output = new Output();
         var students = new List<Student>();
         var studentsData =
             fileReader.DownloadData(
