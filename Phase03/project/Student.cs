@@ -6,7 +6,7 @@
         public double AverageGrade { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        private List<Lesson> Lessons{ get; set; } = new(){new Lesson(){}};
+        public List<Lesson> Lessons{ get; set; } = new();
 
         public void AddLesson(Lesson lesson)
         {
