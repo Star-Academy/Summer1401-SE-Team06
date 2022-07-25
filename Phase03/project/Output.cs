@@ -4,12 +4,12 @@ public class Output
 {
     public void printTopStudents(List<Student> students)
     {
-        for (int i = 0; i < 3; i++)
+        for (var i = 0; i < 3; i++)
         {
             var sortedStudents = students.OrderByDescending(x => x.AverageGrade);
-            Student student = sortedStudents.ElementAt(i);
-            string name = student.FirstName + " " + student.LastName;
-            double averageScore = student.AverageGrade;
+            var student = sortedStudents.ElementAt(i);
+            var name = student.FirstName + " " + student.LastName;
+            var averageScore = student.AverageGrade;
 
             Console.WriteLine("Name: " + name + " | Average Score: " + averageScore);
             Console.WriteLine();

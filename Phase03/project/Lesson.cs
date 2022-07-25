@@ -1,8 +1,7 @@
-﻿namespace project
+﻿namespace project;
+
+public class Lesson
 {
-    public class Lesson
-    {
-        public string name { get; set; }
-        public double score { get; set; }
-    }
+    public string name { get; set; }
+    public double score { get; set; }
 }

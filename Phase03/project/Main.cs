@@ -1,16 +1,13 @@
-﻿using Newtonsoft.Json;
-using project;
-using System.Net;
+﻿using project;
 
-namespace Project
+namespace Project;
+
+internal class App
 {
-    class App
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            FileReader fileReader = new FileReader();
-            Output output = new Output();
-            new RunProgram().Run(fileReader, output);
-        }
+        var fileReader = new FileReader();
+        var output = new Output();
+        new RunProgram().Run(fileReader, output);
     }
 }
