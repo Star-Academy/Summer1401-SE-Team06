@@ -1,9 +1,11 @@
 namespace project;
 
-public class RunProgram
+public class ProgramController
 {
-    public void Run(FileReader fileReader, Output output)
+    public void Run()
     {
+        var fileReader = new FileReader();
+        var output = new Output();
         var students = new List<Student>();
         var studentsData =
             fileReader.DownloadData(
@@ -11,8 +13,10 @@ public class RunProgram
         var scoresData =
             fileReader.DownloadData(
                 "https://docs.code-star.ir/assets/files/scores-76885bff66d5238dfd0661c6ac6d74fc.json");
-        students = fileReader.ParseStudents(students, studentsData);
-        students = fileReader.ParseScores(students, scoresData);
+
+        var jsonParser = new JsonParser();
+        students = jsonParser.ParseStudents(students, studentsData);
+        students = jsonParser.ParseScores(students, scoresData);
         output.printTopStudents(students);
     }
 }
