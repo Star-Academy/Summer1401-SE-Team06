@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FTI8iNcMJ1O8wMdEsUdt6LJBPWUWoBi5cTQ53NGtAJJyeXthtsD7kOrHzLXoT/5oMJaNBHPdhEecwiHfJcyYgg==",
+  "dgSpecHash": "4TowF92PB56dC3pUvEzM4acZy16LjaQYqxyTspsxjwfyz3q4lDC8scm+KiKowHxOTNxvmnWBn81djhfIX+CEZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator\\SimpleCalculator.Console.csproj",
+  "projectFilePath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator\\SimpleCalculator.Console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj": {}
+    "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj": {
+    "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj",
+        "projectUniqueName": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj",
         "projectName": "SimpleCalculator.Business",
-        "projectPath": "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj",
+        "projectPath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator.Business\\SimpleCalculator.Business.csproj",
         "packagesPath": "C:\\Users\\alibn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alibn\\RiderProjects\\SimpleCalculator\\SimpleCalculator.Business\\obj\\",
+        "outputPath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\Phase04\\SimpleCalculator.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alibn\\AppData\\Roaming\\NuGet\\NuGet.Config"
