@@ -1,9 +1,10 @@
-﻿namespace SimpleCalculator.Business.Enums;
-
-public enum OperatorEnum
+﻿namespace SimpleCalculator.Business.Enums
 {
-    sum,
-    sub,
-    multiply,
-    division
+    public enum OperatorEnum
+    {
+        sum,
+        sub,
+        multiply,
+        division
+    }
 }

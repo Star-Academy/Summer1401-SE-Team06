@@ -1,8 +1,9 @@
 ﻿using SimpleCalculator.Business.Enums;
 
-namespace SimpleCalculator.Business.Abstraction;
-
-public interface IOperatorProvider
+namespace SimpleCalculator.Business.Abstraction
 {
-    IOperator GetOperator(OperatorEnum operatorType);
+    public interface IOperatorProvider
+    {
+        IOperator GetOperator(OperatorEnum operatorType);
+    }
 }

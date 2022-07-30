@@ -1,11 +1,12 @@
 ﻿using SimpleCalculator.Business.Abstraction;
 
-namespace SimpleCalculator.Business.OperatorBusiness.Operators;
-
-internal class MultiplyOperator : IOperator
+namespace SimpleCalculator.Business.OperatorBusiness.Operators
 {
-    public int Calculate(int first, int second)
+    internal class MultiplyOperator : IOperator
     {
-        return first * second;
+        public int Calculate(int first, int second)
+        {
+            return first * second;
+        }
     }
 }

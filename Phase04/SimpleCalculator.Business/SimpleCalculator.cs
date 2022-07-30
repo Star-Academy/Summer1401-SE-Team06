@@ -2,24 +2,25 @@
 using SimpleCalculator.Business.Enums;
 using SimpleCalculator.Business.OperatorBusiness;
 
-namespace SimpleCalculator.Business;
-
-public class Calculator
+namespace SimpleCalculator.Business
 {
-    private readonly IOperatorProvider _operatorProvider;
-
-    public Calculator(IOperatorProvider operatorProvider)
+    public class Calculator
     {
-        _operatorProvider = operatorProvider;
-    }
+        private readonly IOperatorProvider _operatorProvider;
 
-    public Calculator() : this(new OperatorProvider())
-    {
-    }
+        public Calculator(IOperatorProvider operatorProvider)
+        {
+            _operatorProvider = operatorProvider;
+        }
 
-    public int Calculate(int first, int second, OperatorEnum operatorType)
-    {
-        var @operator = _operatorProvider.GetOperator(operatorType);
-        return @operator.Calculate(first, second);
+        public Calculator() : this(new OperatorProvider())
+        {
+        }
+
+        public int Calculate(int first, int second, OperatorEnum operatorType)
+        {
+            var @operator = _operatorProvider.GetOperator(operatorType);
+            return @operator.Calculate(first, second);
+        }
     }
 }

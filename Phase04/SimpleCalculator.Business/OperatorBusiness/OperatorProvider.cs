@@ -2,19 +2,20 @@
 using SimpleCalculator.Business.Enums;
 using SimpleCalculator.Business.OperatorBusiness.Operators;
 
-namespace SimpleCalculator.Business.OperatorBusiness;
-
-public class OperatorProvider : IOperatorProvider
+namespace SimpleCalculator.Business.OperatorBusiness
 {
-    public IOperator GetOperator(OperatorEnum operatorType)
+    public class OperatorProvider : IOperatorProvider
     {
-        return operatorType switch
+        public IOperator GetOperator(OperatorEnum operatorType)
         {
-            OperatorEnum.sum => new SumOperator(),
-            OperatorEnum.sub => new SubOperator(),
-            OperatorEnum.multiply => new MultiplyOperator(),
-            OperatorEnum.division => new DivisionOperator(),
-            _ => throw new NotSupportedException()
-        };
+            return operatorType switch
+            {
+                OperatorEnum.sum => new SumOperator(),
+                OperatorEnum.sub => new SubOperator(),
+                OperatorEnum.multiply => new MultiplyOperator(),
+                OperatorEnum.division => new DivisionOperator(),
+                _ => throw new NotSupportedException(),
+            };
+        }
     }
 }

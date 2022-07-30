@@ -1,12 +1,16 @@
 ﻿using SimpleCalculator.Business.Abstraction;
 
-namespace SimpleCalculator.Business.OperatorBusiness.Operators;
-
-internal class DivisionOperator : IOperator
+namespace SimpleCalculator.Business.OperatorBusiness.Operators
 {
-    public int Calculate(int first, int second)
+    internal class DivisionOperator : IOperator
     {
-        if (second == 0) throw new DivideByZeroException();
-        return first / second;
+        public int Calculate(int first, int second)
+        {
+            if (second == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            return first / second;
+        }
     }
 }

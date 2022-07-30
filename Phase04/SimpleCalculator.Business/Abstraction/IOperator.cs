@@ -1,6 +1,7 @@
-﻿namespace SimpleCalculator.Business.Abstraction;
-
-public interface IOperator
+﻿namespace SimpleCalculator.Business.Abstraction
 {
-    int Calculate(int first, int second);
+    public interface IOperator
+    {
+        int Calculate(int first, int second);
+    }
 }
