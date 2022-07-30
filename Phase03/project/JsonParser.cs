@@ -18,7 +18,7 @@ public class JsonParser
         dynamic scoresJson = JsonConvert.DeserializeObject(scoresData);
         foreach (var item in scoresJson)
         {
-            var student = students.Where(x => x.StudentNumber == (int)item.StudentNumber);
+            var student = students.Where(x => x.StudentNumber == (int) item.StudentNumber);
             student.ElementAt(0).AddLesson(new Lesson { Name = item.Lesson, Score = item.Score });
         }
 
