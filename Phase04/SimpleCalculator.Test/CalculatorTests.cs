@@ -22,7 +22,7 @@ public class CalculatorTests
     }
     
     [Fact]
-    public void Calculate_Somthing()
+    public void Calculate_givingTwoNumbersAndMockedMethods_returnSumOfThoseNumbers()
     {
         //Arrange
         IOperator mockedOperatorToAddNumbers = Substitute.For<IOperator>();
