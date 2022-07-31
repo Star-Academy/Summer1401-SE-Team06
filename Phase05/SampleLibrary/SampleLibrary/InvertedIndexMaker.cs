@@ -13,7 +13,7 @@ public class InvertedIndexMaker
 
     public void make()
     {
-        foreach (var doc in documents) 
+        foreach (var doc in documents)
             invertedIndex.indexDocument(doc.Value, doc.Key);
     }
 }
