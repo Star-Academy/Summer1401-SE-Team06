@@ -34,11 +34,11 @@ public class InvertedIndexTest
         documents["3"] = "to search some words";
         documents["4"] = "in a text, ali";
 
-        var invertedIndex = new InvertedIndex();
-        var invertedIndexMaker = new InvertedIndexMaker(invertedIndex, documents);
-        invertedIndexMaker.make();
+        var rawInvertedIndex = new InvertedIndex();
+        var invertedIndexMaker = new InvertedIndexMaker(documents);
+        var completedInvertedIndex = invertedIndexMaker.Make(rawInvertedIndex);
 
-        var map = invertedIndex.Map;
+        var map = completedInvertedIndex.Map;
 
         map.ContainsKey("hello").Should().Be(true);
         map.ContainsKey("mohammad").Should().NotBe(true);
