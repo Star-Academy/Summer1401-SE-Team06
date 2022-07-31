@@ -1,7 +1,7 @@
 ﻿using SimpleCalculator.Business;
 using SimpleCalculator.Business.Enums;
 
-namespace SimpleCalculator.ConsoleApp
+namespace SimpleCalculator.Console
 {
     internal class UiManager
     {
@@ -31,8 +31,8 @@ namespace SimpleCalculator.ConsoleApp
 
         private static string? GetNumberString(string name)
         {
-            Console.WriteLine($"Write a non-decimal number for '{name} operand:");
-            return Console.ReadLine();
+            System.Console.WriteLine($"Write a non-decimal number for '{name} operand:");
+            return System.Console.ReadLine();
         }
 
         private static int GetOperand(string name)
@@ -40,7 +40,7 @@ namespace SimpleCalculator.ConsoleApp
             var numberString = GetNumberString(name);
             while (!int.TryParse(numberString, out _))
             {
-                Console.WriteLine($"Cannot parse given number '{numberString}'");
+                System.Console.WriteLine($"Cannot parse given number '{numberString}'");
                 numberString = GetNumberString(name);
             }
             return int.Parse(numberString);
@@ -51,7 +51,7 @@ namespace SimpleCalculator.ConsoleApp
             var operatorSign = GetOperatorSign();
             while (!s_operatorSigns.ContainsKey(operatorSign))
             {
-                Console.WriteLine($"Given operator '{operatorSign}' is not valid!");
+                System.Console.WriteLine($"Given operator '{operatorSign}' is not valid!");
                 operatorSign = GetOperatorSign();
             }
             return s_operatorSigns[operatorSign];
@@ -59,20 +59,20 @@ namespace SimpleCalculator.ConsoleApp
 
         private static string GetOperatorSign()
         {
-            Console.WriteLine($"Write operator sign ({string.Join(',', s_operatorSigns.Keys)}):");
-            return Console.ReadLine().Trim();
+            System.Console.WriteLine($"Write operator sign ({string.Join(',', s_operatorSigns.Keys)}):");
+            return System.Console.ReadLine().Trim();
         }
 
         private static void SayHi()
         {
-            Console.WriteLine("Hi user");
-            Console.WriteLine("How you doing?");
+            System.Console.WriteLine("Hi user");
+            System.Console.WriteLine("How you doing?");
         }
 
         private void Calculate(OperatorEnum operatorType, int firstOperand, int secondOperand)
         {
             var result = _calculator.Calculate(firstOperand, secondOperand, operatorType);
-            Console.WriteLine($"{operatorType}({firstOperand}, {secondOperand}) = {result}");
+            System.Console.WriteLine($"{operatorType}({firstOperand}, {secondOperand}) = {result}");
         }
     }
 }

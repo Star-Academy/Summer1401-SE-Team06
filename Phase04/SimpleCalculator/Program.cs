@@ -1,5 +1,5 @@
 ﻿using SimpleCalculator.Business;
-using SimpleCalculator.ConsoleApp;
+using SimpleCalculator.Console;
 
 new UiManager(new Calculator())
     .StartUI();

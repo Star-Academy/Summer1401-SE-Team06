@@ -5,72 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1523549-6879-470b-a27c-b6970afc14bf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/Abstraction/IOperator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/Abstraction/IOperatorProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/Enums/OperatorEnum.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/OperatorBusiness/OperatorProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/OperatorBusiness/Operators/DivisionOperator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/OperatorBusiness/Operators/MultiplyOperator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/OperatorBusiness/Operators/SubOperator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/OperatorBusiness/Operators/SumOperator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/SimpleCalculator.Business.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/SimpleCalculator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/bin/Debug/net6.0/SimpleCalculator.Business.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/bin/Debug/net6.0/SimpleCalculator.Business.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/bin/Debug/net6.0/SimpleCalculator.Business.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/SimpleCalculator.Business.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/ref/SimpleCalculator.Business.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/Debug/net6.0/refint/SimpleCalculator.Business.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/SimpleCalculator.Business.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/SimpleCalculator.Business.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/SimpleCalculator.Business.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/SimpleCalculator.Console.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/UiManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Business.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Business.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Console.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Console.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Console.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/bin/Debug/net6.0/SimpleCalculator.Console.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/ref/SimpleCalculator.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/refint/SimpleCalculator.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/SimpleCalculator.Console.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/SimpleCalculator.Console.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/SimpleCalculator.Console.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Phase04.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Phase04.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleCalculator.Business/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleCalculator.Business/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleCalculator/obj/Debug/net6.0/SimpleCalculator.Console.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleCalculator/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleCalculator/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +62,7 @@
       <updated>1659158042430</updated>
       <workItem from="1659158044690" duration="2010000" />
       <workItem from="1659160126114" duration="281000" />
+      <workItem from="1659172097688" duration="39000" />
     </task>
     <servers />
   </component>
