@@ -14,10 +14,7 @@ public class FileReader
         var allFilesText = new Dictionary<string, string>();
         var di = new DirectoryInfo(filesDir);
         Parallel.ForEach(di.GetFiles("*", SearchOption.TopDirectoryOnly),
-            file =>
-            {
-                allFilesText[file.Name] = File.ReadAllText(file.FullName).ToUpper();
-            });
+            file => { allFilesText[file.Name] = File.ReadAllText(file.FullName).ToUpper(); });
 
         return allFilesText;
     }
