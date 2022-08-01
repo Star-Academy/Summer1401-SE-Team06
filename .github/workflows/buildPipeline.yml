@@ -20,12 +20,12 @@ jobs:
 
             - name: Install dependencies
               run: dotnet restore
-              working-directory: Phase05\SampleLibrary
+              working-directory: Phase05/SampleLibrary/SampleLibrary.sln
 
             - name: Build
               run: dotnet build --configuration Release --no-restore
-              working-directory: Phase05\SampleLibrary
+              working-directory: Phase05/SampleLibrary/SampleLibrary.sln
 
             - name: Test
               run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
-              working-directory: Phase05\SampleLibrary
+              working-directory: Phase05/SampleLibrary/SampleLibrary.sln
