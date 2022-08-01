@@ -1756,14 +1756,14 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "SampleLibrary/1.0.0": {
+      "StarAcademy.CodeStar1401.Team06.SearchEngine/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/SampleLibrary.dll": {}
+          "bin/placeholder/StarAcademy.CodeStar1401.Team06.SearchEngine.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SampleLibrary.dll": {}
+          "bin/placeholder/StarAcademy.CodeStar1401.Team06.SearchEngine.dll": {}
         }
       }
     }
@@ -6233,7 +6233,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "SampleLibrary/1.0.0": {
+    "StarAcademy.CodeStar1401.Team06.SearchEngine/1.0.0": {
       "type": "project",
       "path": "../SampleLibrary/SampleLibrary.csproj",
       "msbuildProject": "../SampleLibrary/SampleLibrary.csproj"
@@ -6244,26 +6244,26 @@
       "FluentAssertions >= 6.7.0",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NSubstitute >= 4.4.0",
-      "SampleLibrary >= 1.0.0",
+      "StarAcademy.CodeStar1401.Team06.SearchEngine >= 1.0.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\alibn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\SampleLibrary.Test.csproj",
+      "projectUniqueName": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\SampleLibrary.Test.csproj",
       "projectName": "SampleLibrary.Test",
-      "projectPath": "C:\\Users\\User\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\SampleLibrary.Test.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\obj\\",
+      "projectPath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\SampleLibrary.Test.csproj",
+      "packagesPath": "C:\\Users\\alibn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\alibn\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -6275,8 +6275,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\User\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary\\SampleLibrary.csproj": {
-              "projectPath": "C:\\Users\\User\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary\\SampleLibrary.csproj"
+            "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary\\SampleLibrary.csproj": {
+              "projectPath": "C:\\Users\\alibn\\RiderProjects\\Summer1401-SE-Team06\\phase06\\SampleLibrary\\SampleLibrary\\SampleLibrary.csproj"
             }
           }
         }
