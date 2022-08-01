@@ -2,9 +2,9 @@ name: build
 
 on:
     push:
-        branches: [main]
+        branches: ["main"]
     pull_request:
-        branches: [main]
+        branches: ["main"]
 
 jobs:
     build:
@@ -20,15 +20,15 @@ jobs:
 
             - name: Install dependencies
               run: dotnet restore
-              working-directory: <path to solution>
+              working-directory: phase06/SampleLibrary/
 
             - name: Build
               run: dotnet build --configuration Release --no-restore
-              working-directory: <path to solution>
+              working-directory: phase06/SampleLibrary/
 
             - name: Test
               run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
-              working-directory: <path to solution>
+              working-directory: phase06/SampleLibrary/
 
             - name: Publish code coverage reports to codecove.io
               uses: codecov/codecov-action@v1
