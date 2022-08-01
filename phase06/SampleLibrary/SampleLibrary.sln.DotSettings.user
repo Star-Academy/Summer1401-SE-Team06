@@ -3,5 +3,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::E61ABC82-F6EE-4A20-AD5B-B9E55CB86FE7::net6.0::SampleLibrary.Test.FileReaderTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::E61ABC82-F6EE-4A20-AD5B-B9E55CB86FE7::net6.0::SampleLibrary.Test.InvertedIndexTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E61ABC82-F6EE-4A20-AD5B-B9E55CB86FE7::net6.0::SampleLibrary.Test.SearchEngineTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
