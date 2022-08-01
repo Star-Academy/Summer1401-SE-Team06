@@ -22,10 +22,10 @@ steps:
   run: dotnet restore
   working-directory: Phase05\SampleLibrary
 
-  - name: Build
+- name: Build
   run: dotnet build --configuration Release --no-restore
   working-directory: Phase05\SampleLibrary
   
-  - name: Test
+- name: Test
   run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
   working-directory: Phase05\SampleLibrary
