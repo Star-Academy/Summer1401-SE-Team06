@@ -4,7 +4,10 @@
     <projectFile>project/project.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3d1912-a477-4676-8d3d-20eb3bbcb650" name="Changes" comment="" />
+    <list default="true" id="db3d1912-a477-4676-8d3d-20eb3bbcb650" name="Changes" comment="Add dependencies">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_26_2022_5_18_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_26_2022_5_18_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,12 +58,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0eb4169c-3836-4e1d-a574-c3af3999d698" name="Changes" comment="Add dependencies" />
+      <changelist id="db3d1912-a477-4676-8d3d-20eb3bbcb650" name="Changes" comment="" />
       <created>1659164261972</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659164261972</updated>
       <workItem from="1659164265651" duration="147000" />
+      <workItem from="1659335651170" duration="901000" />
     </task>
     <servers />
   </component>
