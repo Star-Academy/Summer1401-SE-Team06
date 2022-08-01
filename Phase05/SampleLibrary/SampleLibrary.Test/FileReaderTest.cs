@@ -7,7 +7,7 @@ public class FileReaderTest
     [Fact]
     public void FileReading_ScanAllFilesAndCheckOne_ReturnsTrue()
     {
-        var filesDir = @"C:\Users\alibn\RiderProjects\Summer1401-SE-Team06\Phase05\SampleLibrary\EnglishData";
+        var filesDir = @"C:\Users\User\Desktop\EnglishData";
         var fileReader = new FileReader(filesDir);
         var files = fileReader.readFiles();
 

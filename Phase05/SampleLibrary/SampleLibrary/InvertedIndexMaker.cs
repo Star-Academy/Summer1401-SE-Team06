@@ -2,18 +2,17 @@ namespace SampleLibrary;
 
 public class InvertedIndexMaker
 {
-    private readonly Dictionary<string, string> documents = new();
-    private readonly InvertedIndex invertedIndex;
+    private readonly Dictionary<string, string> _documents;
 
-    public InvertedIndexMaker(InvertedIndex invertedIndex, Dictionary<string, string> documents)
+    public InvertedIndexMaker(Dictionary<string, string> documents)
     {
-        this.invertedIndex = invertedIndex;
-        this.documents = documents;
+        this._documents = documents;
     }
 
-    public void make()
+    public InvertedIndex Make(InvertedIndex invertedIndex)
     {
-        foreach (var doc in documents)
+        foreach (var doc in _documents)
             invertedIndex.indexDocument(doc.Value, doc.Key);
+        return invertedIndex;
     }
 }
