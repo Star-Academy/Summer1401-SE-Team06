@@ -11,7 +11,7 @@
           "FluentAssertions": "6.7.0",
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "NSubstitute": "4.4.0",
-          "SampleLibrary": "1.0.0",
+          "StarAcademy.CodeStar1401.Team06.SearchEngine": "1.0.0",
           "coverlet.collector": "3.1.2",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3"
@@ -1174,7 +1174,7 @@
         }
       },
       "xunit.runner.visualstudio/2.4.3": {},
-      "SampleLibrary/1.0.0": {
+      "StarAcademy.CodeStar1401.Team06.SearchEngine/1.0.0": {
         "runtime": {
           "SampleLibrary.dll": {}
         }
@@ -1873,7 +1873,7 @@
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
-    "SampleLibrary/1.0.0": {
+    "StarAcademy.CodeStar1401.Team06.SearchEngine/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
