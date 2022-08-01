@@ -34,9 +34,9 @@ public class InvertedIndexTest
         documents["3"] = "to search some words";
         documents["4"] = "in a text, ali";
 
-        var rawInvertedIndex = new InvertedIndex();
+        var completedInvertedIndex = new InvertedIndex();
         var invertedIndexMaker = new InvertedIndexMaker(documents);
-        var completedInvertedIndex = invertedIndexMaker.Make(rawInvertedIndex);
+        completedInvertedIndex = invertedIndexMaker.Make(completedInvertedIndex);
 
         var map = completedInvertedIndex.Map;
 
