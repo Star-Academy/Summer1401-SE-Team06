@@ -1,6 +1,6 @@
 ﻿namespace project;
 
-public class Student
+public record Student
 {
     public int StudentNumber { get; init; }
     public double AverageGrade { get; set; }
@@ -11,6 +11,6 @@ public class Student
     public void AddLesson(Lesson lesson)
     {
         Lessons.Add(lesson);
-        AverageGrade = Lessons.Select(x => x.Score).Average();
+        AverageGrade = Lessons.Average(x => x.Score);
     }
 }

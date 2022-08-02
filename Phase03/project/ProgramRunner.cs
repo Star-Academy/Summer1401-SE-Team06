@@ -1,6 +1,6 @@
 namespace project;
 
-public class ProgramController
+public class ProgramRunner
 {
     public void Run()
     {

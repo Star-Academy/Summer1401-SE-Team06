@@ -6,9 +6,9 @@ public class FileReader
 {
     public string DownloadData(string url)
     {
-        using (var wc = new WebClient())
+        using (var webClient = new WebClient())
         {
-            return wc.DownloadString(url);
+            return webClient.DownloadString(url);
         }
     }
 }

@@ -6,7 +6,7 @@ internal class App
 {
     public static void Main()
     {
-        var programController = new ProgramController();
+        var programController = new ProgramRunner();
         programController.Run();
     }
 }
