@@ -4,11 +4,9 @@ namespace project;
 
 public class FileReader
 {
-    public string DownloadData(string url)
+    public string ReadFileFromDisk(string filePath)
     {
-        using (var webClient = new WebClient())
-        {
-            return webClient.DownloadString(url);
-        }
+        string text = File.ReadAllText(filePath);  
+        return text;
     }
 }
