@@ -5,7 +5,7 @@ public class ProgramController
     public void Run()
     {
         var fileReader = new FileReader();
-        var output = new Output();
+        var output = new OutputPrinter();
         var students = new List<Student>();
         var studentsData =
             fileReader.DownloadData(
@@ -17,6 +17,6 @@ public class ProgramController
         var jsonParser = new JsonParser();
         students = jsonParser.ParseStudents(studentsData);
         students = jsonParser.ParseScores(students, scoresData);
-        output.printTopStudents(students);
+        output.PrintTopStudents(students);
     }
 }
