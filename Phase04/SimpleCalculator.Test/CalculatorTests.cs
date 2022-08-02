@@ -26,7 +26,7 @@ public class CalculatorTests
     {
         //Arrange
         IOperator mockedOperatorToAddNumbers = Substitute.For<IOperator>();
-        mockedOperatorToAddNumbers.Calculate(Arg.Any<int>(), Arg.Any<int>()).Returns(6);
+        mockedOperatorToAddNumbers.Calculate(Arg.Is<int>(x => x == 4), Arg.Is<int>(x => x == 2)).Returns(6);
         _mockedOperatorProvider.GetOperator(Arg.Any<OperatorEnum>()).Returns(mockedOperatorToAddNumbers);
         Calculator calculator = new Calculator(_mockedOperatorProvider);
 
