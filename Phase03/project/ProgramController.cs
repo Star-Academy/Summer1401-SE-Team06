@@ -15,7 +15,7 @@ public class ProgramController
                 "https://docs.code-star.ir/assets/files/scores-76885bff66d5238dfd0661c6ac6d74fc.json");
 
         var jsonParser = new JsonParser();
-        students = jsonParser.ParseStudents(students, studentsData);
+        students = jsonParser.ParseStudents(studentsData);
         students = jsonParser.ParseScores(students, scoresData);
         output.printTopStudents(students);
     }

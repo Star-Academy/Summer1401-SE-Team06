@@ -4,13 +4,13 @@ namespace project;
 
 public class JsonParser
 {
-    public List<Student> ParseStudents(List<Student> students, string studentsData)
+    public List<Student> ParseStudents(string studentsData)
     {
-        dynamic studentsJson = JsonConvert.DeserializeObject(studentsData);
-        foreach (var item in studentsJson)
-            students.Add(new Student
-                { FirstName = item.FirstName, LastName = item.LastName, StudentNumber = item.StudentNumber });
-        return students;
+        var studentsJson = JsonConvert.DeserializeObject<List<Student>>(studentsData);
+        // foreach (var item in studentsJson)
+        //     students.Add(new Student
+        //         { FirstName = item.FirstName, LastName = item.LastName, StudentNumber = item.StudentNumber });
+        return studentsJson;
     }
 
     public List<Student> ParseScores(List<Student> students, string scoresData)
