@@ -55,28 +55,4 @@ public class InvertedIndexTest
         map["ali"].Should().NotContain("2");
         map["ali"].Should().NotContain("3");
     }
-
-    [Fact]
-    public void InvertedIndexMaker_InsertSomeWordsInInvertedIndex_ReturnsTrue()
-    {
-        var documents = new Dictionary<string, string>();
-        documents["1"] = "hello ali";
-        documents["2"] = "this is a code";
-        documents["3"] = "to search some words";
-        documents["4"] = "in a text, ali";
-
-        var completedInvertedIndex = new InvertedIndex();
-        var invertedIndexMaker = new InvertedIndexMaker(documents);
-        completedInvertedIndex = invertedIndexMaker.Make(completedInvertedIndex);
-
-        var map = completedInvertedIndex.Map;
-
-        map.ContainsKey("hello").Should().Be(true);
-        map.ContainsKey("mohammad").Should().NotBe(true);
-
-        map["ali"].Contains("1").Should().Be(true);
-        map["ali"].Contains("4").Should().Be(true);
-
-        map["ali"].Contains("2").Should().Be(false);
-    }
 }
