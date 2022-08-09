@@ -6,8 +6,7 @@ public class JsonParser
 {
     public List<Student> ParseStudents(string studentsData)
     {
-        var studentsJson = JsonConvert.DeserializeObject<List<Student>>(studentsData);
-        return studentsJson;
+        return JsonConvert.DeserializeObject<List<Student>>(studentsData);
     }
 
     public List<Student> ParseScores(List<Student> students, string scoresData)
