@@ -27,10 +27,10 @@ public class CalculatorTests
     public void Calculate_givingTwoNumbersAndMockedMethods_returnSumOfThoseNumbers(int first, int second, int expected)
     {
         //Arrange
-        IOperator mockedOperatorToAddNumbers = Substitute.For<IOperator>();
+        var mockedOperatorToAddNumbers = Substitute.For<IOperator>();
         mockedOperatorToAddNumbers.Calculate(Arg.Is<int>(x => x == first), Arg.Is<int>(x => x == second)).Returns(expected);
         _mockedOperatorProvider.GetOperator(Arg.Any<OperatorEnum>()).Returns(mockedOperatorToAddNumbers);
-        Calculator calculator = new Calculator(_mockedOperatorProvider);
+        var calculator = new Calculator(_mockedOperatorProvider);
 
         //act
         var result = calculator.Calculate(first, second, OperatorEnum.sum);

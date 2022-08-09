@@ -9,7 +9,7 @@ public class SumOperatorTests
     public void Calculate_addTwoNumbers_TrueResultValue()
     {
         //arrange
-        SumOperator theOperator = new SumOperator();
+        var theOperator = new SumOperator();
         
         //act
         var result = theOperator.Calculate(23, -34);

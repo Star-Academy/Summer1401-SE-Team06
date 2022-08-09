@@ -9,7 +9,7 @@ public class SubOperatorTests
     public void Calculate_subTwoNumbers_TrueResultValue()
     {
         //arrange
-        SubOperator theOperator = new SubOperator();
+        var theOperator = new SubOperator();
         
         //act
         var result = theOperator.Calculate(65, 33);

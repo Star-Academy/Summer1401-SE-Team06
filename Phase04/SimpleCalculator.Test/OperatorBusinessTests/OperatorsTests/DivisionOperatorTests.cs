@@ -22,7 +22,7 @@ public class DivisionOperatorTests
     public void calculate_DivideByZero_DivideByZeroException()
     {
         //arrange
-        DivisionOperator theOperator = new DivisionOperator();
+        var theOperator = new DivisionOperator();
         
         //act
         Action act = () => theOperator.Calculate(57, 0);

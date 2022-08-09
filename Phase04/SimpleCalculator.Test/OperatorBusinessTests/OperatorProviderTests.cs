@@ -17,7 +17,7 @@ public class OperatorProviderTests
         var operatorProvider = new OperatorProvider();
         
         //act
-        IOperator returnedOperator = operatorProvider.GetOperator(operatorEnum);
+        var returnedOperator = operatorProvider.GetOperator(operatorEnum);
 
         //assert
         returnedOperator.Should().BeOfType(expectedIOperator.GetType());

@@ -9,7 +9,7 @@ public class MultiplyOperatorTests
     public void Calculate_multiplyTwoNumbers_TrueResultValue()
     {
         //arrange
-        MultiplyOperator theOperator = new MultiplyOperator();
+        var theOperator = new MultiplyOperator();
         
         //act
         var result = theOperator.Calculate(12, 21);
