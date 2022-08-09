@@ -4,29 +4,53 @@ namespace SampleLibrary.Test;
 
 public class SearchEngineTest
 {
-    [Fact]
-    public void SearchInDocsTest()
+    private Dictionary<string, HashSet<string>> _dataMap;
+
+    public SearchEngineTest()
     {
-        var map = new Dictionary<string, HashSet<string>>();
+        Initialize();
+    }
 
-        var avoids = new HashSet<string> { "amir" };
-        var necessaries = new HashSet<string> { "ali" };
-        var optionals = new HashSet<string> { "mahdi" };
+    private void Initialize()
+    {
+        _dataMap = new Dictionary<string, HashSet<string>>();
 
-        map["ali"] = new HashSet<string> { "1", "3", "7", "5" };
-        map["mohammad"] = new HashSet<string> { "1", "2", "5", "6" };
-        map["amir"] = new HashSet<string> { "1", "6", "4" };
-        map["mahdi"] = new HashSet<string> { "1", "4", "3", "6" };
+        _dataMap["ali"] = new HashSet<string> { "1", "3", "7", "5" };
+        _dataMap["mohammad"] = new HashSet<string> { "1", "2", "5", "6" };
+        _dataMap["amir"] = new HashSet<string> { "1", "6", "4" };
+        _dataMap["mahdi"] = new HashSet<string> { "1", "4", "3", "6" };
+    }
 
-        var searchInDocs = new SearchInDocs(map);
+    [Theory]
+    [MemberData(nameof(BuildQueryData))]
+    public void SearchInDocsTest_ContainingDocs_ReturnsTrue(HashSet<string> avoids, HashSet<string> necessaries,
+        HashSet<string> optionals)
+    {
+        var searchInDocs = new SearchInDocs(_dataMap);
         var searched = searchInDocs.search(necessaries, optionals, avoids);
 
-        searched.Contains("1").Should().NotBe(true);
-        searched.Contains("2").Should().NotBe(true);
-        searched.Contains("3").Should().Be(true);
-        searched.Contains("4").Should().NotBe(true);
-        searched.Contains("5").Should().Be(true);
-        searched.Contains("6").Should().NotBe(true);
-        searched.Contains("7").Should().Be(true);
+        searched.Should().Contain("3");
+        searched.Should().Contain("5");
+        searched.Should().Contain("7");
+    }
+
+    [Theory]   
+    [MemberData(nameof(BuildQueryData))]
+    public void SearchInDocsTest_NotContainingDocs_ReturnsFalse(HashSet<string> avoids, HashSet<string> optionals,
+        HashSet<string> necessaries)
+    {
+        var searchInDocs = new SearchInDocs(_dataMap);
+        var searched = searchInDocs.search(necessaries, optionals, avoids);
+    
+        searched.Should().NotContain("1");
+        searched.Should().NotContain("2");
+        searched.Should().NotContain("4");
+        searched.Should().NotContain("6");
+    }
+
+    public static IEnumerable<object[]> BuildQueryData()
+    {
+        yield return new object[]
+            { new HashSet<string> { "amir" }, new HashSet<string> { "ali" }, new HashSet<string> { "mahdi" } };
     }
 }
