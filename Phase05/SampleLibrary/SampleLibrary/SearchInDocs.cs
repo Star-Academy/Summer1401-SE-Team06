@@ -14,8 +14,8 @@ public class SearchInDocs
 
     public HashSet<string> search(HashSet<string> necessaries, HashSet<string> optionals, HashSet<string> avoids)
     {
-        InitAvoids(avoids);
-        InitOptionals(optionals);
+        InitSet(avoids, _avoids);
+        InitSet(optionals, _optionals);
         InitNecessaries(necessaries);
 
         _optionals.UnionWith(_necessaries);
@@ -36,17 +36,10 @@ public class SearchInDocs
             }
     }
 
-    private void InitOptionals(HashSet<string> optionals)
+    private void InitSet(HashSet<string> wordSet, HashSet<string> allSets)
     {
-        foreach (var optional in optionals)
+        foreach (var optional in wordSet)
             if (_data.ContainsKey(optional))
-                _optionals.UnionWith(_data[optional]);
-    }
-
-    private void InitAvoids(HashSet<string> avoids)
-    {
-        foreach (var avoided in avoids)
-            if (_data.ContainsKey(avoided))
-                _avoids.UnionWith(_data[avoided]);
+                allSets.UnionWith(_data[optional]);
     }
 }

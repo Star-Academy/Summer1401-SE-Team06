@@ -4,12 +4,20 @@
     <projectFile>SimpleCalculator/SimpleCalculator.Console.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24ae299-e44a-4658-aebd-679fc7c078d8" name="Changes" comment="" />
+    <list default="true" id="8895d1a4-5ddc-4c2e-b30d-3c4530ea6a58" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="phase04" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="TaskManager">
     <servers />
   </component>

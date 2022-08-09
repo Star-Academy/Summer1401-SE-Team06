@@ -6,13 +6,8 @@ public class InvertedIndex
 
     public void indexDocument(string document, string docId)
     {
-        string[] words;
-
-        words = document.Split(" ");
-
-        foreach (var word in words)
-            if (word.Length > 1)
-                AddWordToMap(word, docId);
+        document.Split(" ").Where(word => word.Length > 1).
+            ToList().ForEach(word => AddWordToMap(word, docId));
     }
 
     private void AddWordToMap(string word, string docId)

@@ -6,7 +6,7 @@ public class InvertedIndexMaker
 
     public InvertedIndexMaker(Dictionary<string, string> documents)
     {
-        this._documents = documents;
+        _documents = documents;
     }
 
     public InvertedIndex Make(InvertedIndex invertedIndex)
