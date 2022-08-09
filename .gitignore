@@ -1,3 +1,8 @@
+out/
+.idea/
+.vs/
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/csharp,rider,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=csharp,rider,windows
 
