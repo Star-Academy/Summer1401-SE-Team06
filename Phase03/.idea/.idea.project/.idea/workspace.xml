@@ -4,7 +4,7 @@
     <projectFile>project/project.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3d1912-a477-4676-8d3d-20eb3bbcb650" name="Changes" comment="Add dependencies">
+    <list default="true" id="3a689667-1c32-49f7-8537-d653381057d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_26_2022_5_18_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_26_2022_5_18_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -19,6 +19,13 @@
         <entry key="$PROJECT_DIR$/.." value="phase03-refactor" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/User/Summer1401-SE-Team06/Phase03/project/FileReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/Summer1401-SE-Team06/Phase03/project/FileReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/Summer1401-SE-Team06/Phase03/project/JsonParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/Summer1401-SE-Team06/Phase03/project/Lesson.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/User/Summer1401-SE-Team06/Phase03/project/Main.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2CeXw0yJrbU6iwmUaSufvSpFrsS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
