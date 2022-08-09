@@ -21,18 +21,19 @@ public class CalculatorTests
         _mockedOperatorProvider = Substitute.For<IOperatorProvider>();
     }
     
-    [Fact]
-    public void Calculate_givingTwoNumbersAndMockedMethods_returnSumOfThoseNumbers()
+    [Theory]
+    [InlineData(2, 4, 6)]
+    [InlineData(10, 0, 10)]
+    public void Calculate_givingTwoNumbersAndMockedMethods_returnSumOfThoseNumbers(int first, int second, int expected)
     {
         //Arrange
         IOperator mockedOperatorToAddNumbers = Substitute.For<IOperator>();
-        mockedOperatorToAddNumbers.Calculate(Arg.Is<int>(x => x == 4), Arg.Is<int>(x => x == 2)).Returns(6);
+        mockedOperatorToAddNumbers.Calculate(Arg.Is<int>(x => x == first), Arg.Is<int>(x => x == second)).Returns(expected);
         _mockedOperatorProvider.GetOperator(Arg.Any<OperatorEnum>()).Returns(mockedOperatorToAddNumbers);
         Calculator calculator = new Calculator(_mockedOperatorProvider);
 
         //act
-        //doesn't matter which OperatorEnum is given, since 'GetOperator' is mocked 
-        var result = calculator.Calculate(4, 2, OperatorEnum.division);
+        var result = calculator.Calculate(first, second, OperatorEnum.sum);
 
         //assert
         _testOutputHelper.WriteLine("This is the result: {0}", result);
