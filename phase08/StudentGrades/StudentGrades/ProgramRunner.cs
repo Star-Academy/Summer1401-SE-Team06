@@ -30,6 +30,8 @@ public class ProgramRunner
         {
             var studentAverage = schoolContext.StudentGrades.Where(x => x.StudentNumber == student.StudentNumber).Average(x => x.Score);
             student.AverageGrade = studentAverage;
+            schoolContext.Update(student);
+
         }
     }
 

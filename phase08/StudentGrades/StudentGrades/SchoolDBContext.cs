@@ -10,7 +10,7 @@ public class SchoolDBContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { 
-        optionsBuilder.UseNpgsql(@"Server=localhost;Port=5432;Database=schoolDB;Username=postgres;Password=matin1380");
+        optionsBuilder.UseNpgsql(@"Server=localhost;Port=5432;Database=SchoolDatabase1;Username=postgres;Password=matin1380");
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
