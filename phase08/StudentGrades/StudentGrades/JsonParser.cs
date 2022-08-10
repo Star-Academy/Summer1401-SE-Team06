@@ -9,8 +9,8 @@ public class JsonParser
         return JsonConvert.DeserializeObject<List<Student>>(studentsData);
     }
 
-    public List<Lesson> ParseScores(string scoresData)
+    public List<StudentGrade> ParseScores(string scoresData)
     {
-        return JsonConvert.DeserializeObject<List<Lesson>>(scoresData);
+        return JsonConvert.DeserializeObject<List<StudentGrade>>(scoresData);
     }
 }
