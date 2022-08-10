@@ -3,6 +3,7 @@
 public record Student
 {
     public int StudentNumber { get; init; }
+
     // private double averageGrade; 
     public string FirstName { get; init; }
     public string LastName { get; init; }
@@ -13,4 +14,8 @@ public record Student
         get { return Lessons.Average(x => x.Score); }
     }
 
+    public void RegisterLesson(Lesson lesson)
+    {
+        Lessons.Add(lesson);
+    }
 }
