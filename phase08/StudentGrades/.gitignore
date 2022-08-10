@@ -389,6 +389,8 @@ FodyWeavers.xsd
 # Local History for Visual Studio Code
 .history/
 
+/StudentGrades/bin/
+/StudentGrades/obj/
 # Windows Installer files from build outputs
 *.cab
 *.msi
