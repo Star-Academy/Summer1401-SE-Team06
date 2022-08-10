@@ -9,8 +9,9 @@ public class SchoolDBContext : DbContext
     public DbSet<StudentGrade> StudentGrades { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    { 
-        optionsBuilder.UseNpgsql(@"Server=localhost;Port=5432;Database=SchoolDatabase1;Username=postgres;Password=matin1380");
+    {
+        optionsBuilder.UseNpgsql(
+            @"Server=localhost;Port=5432;Database=SchoolDatabase1;Username=postgres;Password=alibnz5001");
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
@@ -18,6 +19,6 @@ public class SchoolDBContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Student>().HasKey(p => p.StudentNumber);
-        modelBuilder.Entity<StudentGrade>().HasKey(p => new {p.StudentNumber, p.Lesson});
-    }    
+        modelBuilder.Entity<StudentGrade>().HasKey(p => new { p.StudentNumber, p.Lesson });
+    }
 }

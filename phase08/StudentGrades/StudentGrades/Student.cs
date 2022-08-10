@@ -3,10 +3,7 @@
 public record Student
 {
     public int StudentNumber { get; init; }
-
-    // private double averageGrade; 
     public string FirstName { get; init; }
     public string LastName { get; init; }
-    public double AverageGrade{ get; set; }
-
+    public double AverageGrade { get; set; }
 }
