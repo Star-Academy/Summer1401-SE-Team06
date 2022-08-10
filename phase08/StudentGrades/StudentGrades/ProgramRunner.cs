@@ -10,41 +10,18 @@ public class ProgramRunner
         var output = new OutputPrinter();
         var students = new List<Student>();
         var lessons = new List<StudentGrade>();
-
-        var stdPath = @"studentsData.json";
-        var scrPath = @"scoresData.json";
-        var studentsData = fileReader.ReadFileFromDisk(stdPath);
-        var scoresData = fileReader.ReadFileFromDisk(scrPath);
+        var dbController = DBController.Instance;
         var jsonParser = new JsonParser();
+
+        var studentsData = fileReader.ReadFileFromDisk(@"studentsData.json");
+        var scoresData = fileReader.ReadFileFromDisk(@"scoresData.json");
+
         students = jsonParser.ParseStudents(studentsData);
         lessons = jsonParser.ParseScores(scoresData);
-        // AddRecordsToDB(students, lessons);
-        calculateAverageGrade();
+
+        dbController.AddRecordsToDB(students, lessons);
+        dbController.calculateAverageGrade();
+
         output.PrintTopStudents(students);
-    }
-
-    private void calculateAverageGrade()
-    {
-        using (var schoolContext = new SchoolDBContext())
-        {
-            foreach (var student in schoolContext.Students.ToList())
-            {
-                var studentAverage = schoolContext.StudentGrades.Where(x => x.StudentNumber == student.StudentNumber)
-                    .Average(x => x.Score);
-                student.AverageGrade = studentAverage;
-                schoolContext.Update(student);
-                schoolContext.SaveChanges();
-            }
-        }
-    }
-
-    private void AddRecordsToDB(List<Student> students, List<StudentGrade> lessons)
-    {
-        using (var schoolContext = new SchoolDBContext())
-        {
-            schoolContext.Students.AddRange(students);
-            schoolContext.StudentGrades.AddRange(lessons);
-            schoolContext.SaveChanges();
-        }
     }
 }

@@ -8,8 +8,9 @@ public class OutputPrinter
     {
         using (var schoolContext = new SchoolDBContext())
         {
-            schoolContext.Students.OrderByDescending(x => x.AverageGrade).Take(3).ToList().ForEach(student => Console.WriteLine
-                ($"Name: {student.FirstName} {student.LastName} | Average Score: {student.AverageGrade}"));
+            schoolContext.Students.OrderByDescending(x => x.AverageGrade).Take(3).ToList().ForEach(student =>
+                Console.WriteLine
+                    ($"Name: {student.FirstName} {student.LastName} | Average Score: {student.AverageGrade}"));
         }
     }
 }
