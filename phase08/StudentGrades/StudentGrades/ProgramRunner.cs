@@ -6,6 +6,7 @@ public class ProgramRunner
 {
     public void Run()
     {
+        var schoolContext = new SchoolDBContext();
         var fileReader = new FileReader();
         var output = new OutputPrinter();
         var students = new List<Student>();
@@ -18,18 +19,25 @@ public class ProgramRunner
         var jsonParser = new JsonParser();
         students = jsonParser.ParseStudents(studentsData);
         lessons = jsonParser.ParseScores(scoresData);
-        AddRecordsToDB(students, lessons);
-        // foreach (var lesson in lessons)
-        //     students.Where(x => lesson.StudentNumber == x.StudentNumber).ElementAt(0).RegisterLesson(lesson);
+        AddRecordsToDB(students, lessons, schoolContext);
+        calculateAverageGrade(schoolContext);
         output.PrintTopStudents(students);
     }
 
-    private void AddRecordsToDB(List<Student> students, List<StudentGrade> lessons)
+    private void calculateAverageGrade(SchoolDBContext schoolContext)
     {
-        using (var context = new SchoolDBContext()) {
-            context.Students.AddRange(students);
-            context.StudentGrades.AddRange(lessons);
-            context.SaveChanges();
+        foreach (var student in schoolContext.Students)
+        {
+            var studentAverage = schoolContext.StudentGrades.Where(x => x.StudentNumber == student.StudentNumber).Average(x => x.Score);
+            student.AverageGrade = studentAverage;
         }
+    }
+
+    private void AddRecordsToDB(List<Student> students, List<StudentGrade> lessons, SchoolDBContext schoolContext)
+    {
+        schoolContext.Students.AddRange(students);
+        schoolContext.StudentGrades.AddRange(lessons);
+        schoolContext.SaveChanges();
+       
     }
 }

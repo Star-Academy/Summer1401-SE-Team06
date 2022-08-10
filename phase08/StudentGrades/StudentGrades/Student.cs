@@ -7,6 +7,6 @@ public record Student
     // private double averageGrade; 
     public string FirstName { get; init; }
     public string LastName { get; init; }
-
+    public double AverageGrade{ get; set; }
 
 }
