@@ -19,7 +19,7 @@ public class DBController
         }
     }
 
-    public void calculateAverageGrade()
+    public void InitAverageGrade()
     {
         using (var schoolContext = new SchoolDBContext())
         {

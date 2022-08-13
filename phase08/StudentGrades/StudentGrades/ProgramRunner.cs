@@ -20,7 +20,7 @@ public class ProgramRunner
         lessons = jsonParser.ParseScores(scoresData);
 
         dbController.AddRecordsToDB(students, lessons);
-        dbController.calculateAverageGrade();
+        dbController.InitAverageGrade();
 
         output.PrintTopStudents(students);
     }
