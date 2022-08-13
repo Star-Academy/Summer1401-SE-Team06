@@ -23,12 +23,10 @@ public class SearchEngineTest
 
     [Theory]
     [MemberData(nameof(BuildQueryData))]
-    public void SearchInDocsTest_ContainingDocs_ReturnsTrue(HashSet<string> avoids, HashSet<string> necessaries,
-        HashSet<string> optionals)
+    public void SearchInDocsTest_ContainingDocs_ReturnsTrue(WordContainer wordContainer)
     {
         var searchInDocs = new SearchInDocs(_dataMap);
-        var searched = searchInDocs.search(necessaries, optionals, avoids);
-
+        var searched = searchInDocs.search(wordContainer);
         searched.Should().Contain("3");
         searched.Should().Contain("5");
         searched.Should().Contain("7");
@@ -36,11 +34,10 @@ public class SearchEngineTest
 
     [Theory]
     [MemberData(nameof(BuildQueryData))]
-    public void SearchInDocsTest_NotContainingDocs_ReturnsFalse(HashSet<string> avoids, HashSet<string> optionals,
-        HashSet<string> necessaries)
+    public void SearchInDocsTest_NotContainingDocs_ReturnsFalse(WordContainer wordContainer)
     {
         var searchInDocs = new SearchInDocs(_dataMap);
-        var searched = searchInDocs.search(necessaries, optionals, avoids);
+        var searched = searchInDocs.search(wordContainer);
 
         searched.Should().NotContain("1");
         searched.Should().NotContain("2");
@@ -51,6 +48,6 @@ public class SearchEngineTest
     public static IEnumerable<object[]> BuildQueryData()
     {
         yield return new object[]
-            { new HashSet<string> { "amir" }, new HashSet<string> { "ali" }, new HashSet<string> { "mahdi" } };
+            { new WordContainer(new HashSet<string> { "amir" }, new HashSet<string> { "ali" }, new HashSet<string> { "mahdi" } )};
     }
 }
