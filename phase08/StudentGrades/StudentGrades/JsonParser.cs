@@ -2,8 +2,13 @@
 
 namespace project;
 
-public class JsonParser
+public class JsonParser : IDataParser
 {
+    public T Parse<T>(string data)
+    {
+        return JsonConvert.DeserializeObject<T>(data);
+    }
+
     public List<Student> ParseStudents(string studentsData)
     {
         return JsonConvert.DeserializeObject<List<Student>>(studentsData);
