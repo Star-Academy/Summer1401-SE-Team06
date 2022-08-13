@@ -1,7 +1,8 @@
 ﻿namespace project;
 
-public class Lesson
+public record Lesson
 {
-    public string Name { get; set; }
-    public double Score { get; set; }
+    public string Name { get; init; }
+    public double Score { get; init; }
+    public int StudentNumber { get; set; }
 }

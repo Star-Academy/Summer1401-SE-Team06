@@ -4,10 +4,9 @@ namespace Project;
 
 internal class App
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
-        var fileReader = new FileReader();
-        var output = new Output();
-        new RunProgram().Run(fileReader, output);
+        var programController = new ProgramRunner();
+        programController.Run();
     }
 }
