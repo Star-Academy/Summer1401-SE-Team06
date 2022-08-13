@@ -11,7 +11,7 @@ public class RunProgram
         var invertedIndexMaker = new InvertedIndexMaker(documentsDictionary);
         completedInvertedIndex = invertedIndexMaker.Make(completedInvertedIndex);
 
-        var io = new IOWorks();
+        var io = new ConsoleIO();
         var input = io.GetInput();
 
         var inputProcessor = new InputProcessor();
@@ -21,6 +21,6 @@ public class RunProgram
         HashSet<string> result = searchInDocs.search(inputProcessor.necessary,
             inputProcessor.optional, inputProcessor.avoided);
 
-        io.Print(result);
+        io.ShowOutput(result);
     }
 }
