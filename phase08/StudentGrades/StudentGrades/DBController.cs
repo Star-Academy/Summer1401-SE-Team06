@@ -34,12 +34,20 @@ public class DBController
         }
     }
 
-    public void AddRecordsToDB(List<Student> students, List<StudentGrade> lessons)
+    public void AddStudentsToDB(List<Student> record)
     {
         using (var schoolContext = new SchoolDBContext())
         {
-            schoolContext.Students.AddRange(students);
-            schoolContext.StudentGrades.AddRange(lessons);
+            schoolContext.Students.AddRange(record);
+            schoolContext.SaveChanges();
+        }
+    }
+    
+    public void AddGradesToDB(List<StudentGrade> record)
+    {
+        using (var schoolContext = new SchoolDBContext())
+        {
+            schoolContext.StudentGrades.AddRange(record);
             schoolContext.SaveChanges();
         }
     }

@@ -17,7 +17,9 @@ public class ProgramRunner
         var students = dataParser.Parse<List<Student>>(studentsData);
         var lessons = dataParser.Parse<List<StudentGrade>>(scoresData);
 
-        dbController.AddRecordsToDB(students, lessons);
+        dbController.AddStudentsToDB(students);
+        dbController.AddGradesToDB(lessons);
+        
         dbController.InitAverageGrade();
 
         var topStudents = dbController.GetTopNStudents(3);
