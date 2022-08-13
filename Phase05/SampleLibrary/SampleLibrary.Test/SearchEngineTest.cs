@@ -34,14 +34,14 @@ public class SearchEngineTest
         searched.Should().Contain("7");
     }
 
-    [Theory]   
+    [Theory]
     [MemberData(nameof(BuildQueryData))]
     public void SearchInDocsTest_NotContainingDocs_ReturnsFalse(HashSet<string> avoids, HashSet<string> optionals,
         HashSet<string> necessaries)
     {
         var searchInDocs = new SearchInDocs(_dataMap);
         var searched = searchInDocs.search(necessaries, optionals, avoids);
-    
+
         searched.Should().NotContain("1");
         searched.Should().NotContain("2");
         searched.Should().NotContain("4");

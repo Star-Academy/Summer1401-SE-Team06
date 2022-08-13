@@ -43,9 +43,13 @@ public class InvertedIndexTest
     public void InvertedIndex_DocsContainingAWord_ReturnsTrue()
     {
         var map = _invertedIndex.Map;
+        var value = new HashSet<string>();
 
-        map["ali"].Should().Contain("1");
-        map["ali"].Should().Contain("4");
+        if (map.TryGetValue("ali", out value))
+        {
+            value.Should().Contain("1");
+            value.Should().Contain("4");
+        }
     }
 
     [Fact]
@@ -53,7 +57,12 @@ public class InvertedIndexTest
     {
         var map = _invertedIndex.Map;
 
-        map["ali"].Should().NotContain("2");
-        map["ali"].Should().NotContain("3");
+        var value = new HashSet<string>();
+
+        if (map.TryGetValue("ali", out value))
+        {
+            value.Should().NotContain("2");
+            value.Should().NotContain("3");
+        }
     }
 }
