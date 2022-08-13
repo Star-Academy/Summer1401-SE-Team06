@@ -43,4 +43,12 @@ public class DBController
             schoolContext.SaveChanges();
         }
     }
+
+    public List<Student> GetTopNStudents(int n)
+    {
+        using (var schoolContext = new SchoolDBContext())
+        {
+            return schoolContext.Students.OrderByDescending(x => x.AverageGrade).Take(n).ToList();
+        }
+    }
 }

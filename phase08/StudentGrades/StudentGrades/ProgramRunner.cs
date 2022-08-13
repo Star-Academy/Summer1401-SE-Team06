@@ -20,6 +20,7 @@ public class ProgramRunner
         dbController.AddRecordsToDB(students, lessons);
         dbController.InitAverageGrade();
 
-        output.PrintTopStudents(students);
+        var topStudents = dbController.GetTopNStudents(3);
+        output.PrintTopStudents(topStudents);
     }
 }
