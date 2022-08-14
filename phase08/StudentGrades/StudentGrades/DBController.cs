@@ -4,10 +4,12 @@ namespace DefaultNamespace;
 
 public class DBController
 {
+    private static SchoolDBContext _schoolContext;
     private static DBController instance;
 
     private DBController()
     {
+        _schoolContext = new SchoolDBContext();
     }
 
     public static DBController Instance
@@ -21,42 +23,42 @@ public class DBController
 
     public void InitAverageGrade()
     {
-        using (var schoolContext = new SchoolDBContext())
+        using (_schoolContext)
         {
-            foreach (var student in schoolContext.Students.ToList())
+            foreach (var student in _schoolContext.Students.ToList())
             {
-                var studentAverage = schoolContext.StudentGrades.Where(x => x.StudentNumber == student.StudentNumber)
+                var studentAverage = _schoolContext.StudentGrades.Where(x => x.StudentNumber == student.StudentNumber)
                     .Average(x => x.Score);
                 student.AverageGrade = studentAverage;
-                schoolContext.Update(student);
-                schoolContext.SaveChanges();
+                _schoolContext.Update(student);
+                _schoolContext.SaveChanges();
             }
         }
     }
 
     public void AddStudentsToDB(List<Student> record)
     {
-        using (var schoolContext = new SchoolDBContext())
+        using (_schoolContext)
         {
-            schoolContext.Students.AddRange(record);
-            schoolContext.SaveChanges();
+            _schoolContext.Students.AddRange(record);
+            _schoolContext.SaveChanges();
         }
     }
-    
+
     public void AddGradesToDB(List<StudentGrade> record)
     {
-        using (var schoolContext = new SchoolDBContext())
+        using (_schoolContext)
         {
-            schoolContext.StudentGrades.AddRange(record);
-            schoolContext.SaveChanges();
+            _schoolContext.StudentGrades.AddRange(record);
+            _schoolContext.SaveChanges();
         }
     }
 
     public List<Student> GetTopNStudents(int n)
     {
-        using (var schoolContext = new SchoolDBContext())
+        using (_schoolContext)
         {
-            return schoolContext.Students.OrderByDescending(x => x.AverageGrade).Take(n).ToList();
+            return _schoolContext.Students.OrderByDescending(x => x.AverageGrade).Take(n).ToList();
         }
     }
 }
