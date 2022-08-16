@@ -16,9 +16,7 @@ public class SearchInDocs
 
         finalWords.Optionals.UnionWith(finalWords.Necessaries);
         finalWords.Optionals.ExceptWith(finalWords.Avoids);
-
-        var result = finalWords.Optionals;
-
-        return result;
+        
+        return finalWords.Optionals;
     }
 }

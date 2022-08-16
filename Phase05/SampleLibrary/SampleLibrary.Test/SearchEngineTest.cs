@@ -48,6 +48,9 @@ public class SearchEngineTest
     public static IEnumerable<object[]> BuildQueryData()
     {
         yield return new object[]
-            { new WordContainer(new HashSet<string> { "amir" }, new HashSet<string> { "ali" }, new HashSet<string> { "mahdi" } )};
+        {
+            new WordContainer(new HashSet<string> { "amir" }, new HashSet<string> { "ali" },
+                new HashSet<string> { "mahdi" })
+        };
     }
 }

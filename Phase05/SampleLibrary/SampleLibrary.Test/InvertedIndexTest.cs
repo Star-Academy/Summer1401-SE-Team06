@@ -20,35 +20,41 @@ public class InvertedIndexTest
         _invertedIndex.indexDocument("in a text, ali", "4");
     }
 
-    [Fact]
-    public void InvertedIndex_ExistingWords_ReturnsTrue()
+    [Theory]
+    [InlineData("ali")]
+    [InlineData("hello")]
+    public void InvertedIndex_ExistingWords_ReturnsTrue(string content)
     {
         var map = _invertedIndex.Map;
 
-        map.ContainsKey("hello").Should().Be(true);
-        map.ContainsKey("ali").Should().Be(true);
+        map.ContainsKey(content).Should().Be(true);
     }
 
 
-    [Fact]
-    public void InvertedIndex_NotExistingWords_ReturnsFalse()
+    [Theory]
+    [InlineData("mohammad")]
+    [InlineData("test")]
+    public void InvertedIndex_NotExistingWords_ReturnsFalse(string content)
     {
         var map = _invertedIndex.Map;
 
-        map.ContainsKey("mohammad").Should().NotBe(true);
-        map.ContainsKey("test").Should().NotBe(true);
+        map.ContainsKey(content).Should().NotBe(true);
     }
 
     [Fact]
     public void InvertedIndex_DocsContainingAWord_ReturnsTrue()
     {
         var map = _invertedIndex.Map;
-        var value = new HashSet<string>();
+        var actual = new HashSet<string>();
 
-        if (map.TryGetValue("ali", out value))
+        if (map.TryGetValue("ali", out actual))
         {
-            value.Should().Contain("1");
-            value.Should().Contain("4");
+            var expected = new HashSet<string> { "1", "4" };
+            actual.Should().Contain(expected);
+        }
+        else
+        {
+            throw new KeyNotFoundException();
         }
     }
 
@@ -57,12 +63,16 @@ public class InvertedIndexTest
     {
         var map = _invertedIndex.Map;
 
-        var value = new HashSet<string>();
+        var actual = new HashSet<string>();
 
-        if (map.TryGetValue("ali", out value))
+        if (map.TryGetValue("ali", out actual))
         {
-            value.Should().NotContain("2");
-            value.Should().NotContain("3");
+            var unexpected = new HashSet<string> { "2", "3" };
+            actual.Should().NotContain(unexpected);
+        }
+        else
+        {
+            throw new KeyNotFoundException();
         }
     }
 }
