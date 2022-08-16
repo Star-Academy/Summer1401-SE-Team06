@@ -22,11 +22,13 @@ public class SearchController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<string> Search(string query)
+    public ActionResult<IEnumerable<string>> Search(string query)
     {
+        if (string.IsNullOrEmpty(query)) return BadRequest("Invalid query");
+
         _inputProcessor.Process(query);
         HashSet<string> result = _searchInDocs.search(_inputProcessor.necessary,
             _inputProcessor.optional, _inputProcessor.avoided);
-        return result;
+        return result.Any() ? Ok(result) : NotFound();
     }
 }
