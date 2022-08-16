@@ -7,22 +7,21 @@ public class ProgramRunner
     public void Run()
     {
         var fileReader = new FileReader();
-        var output = new OutputPrinter();
-        var dbController = DBRepository.Instance;
-        var dataParser = new JsonParser();
-
         var studentsData = fileReader.ReadFileFromDisk(@"studentsData.json");
         var scoresData = fileReader.ReadFileFromDisk(@"scoresData.json");
 
+        var dataParser = new JsonParser();
         var students = dataParser.Parse<List<Student>>(studentsData);
         var lessons = dataParser.Parse<List<StudentGrade>>(scoresData);
 
-        dbController.AddStudentsToDB(students);
-        dbController.AddGradesToDB(lessons);
+        DBRepository.Instance.AddStudentsToDB(students);
+        DBRepository.Instance.AddGradesToDB(lessons);
 
-        dbController.InitAverageGrade();
+        DBRepository.Instance.InitAverageGrade();
 
-        var topStudents = dbController.GetTopNStudents(3);
+        var topStudents = DBRepository.Instance.GetTopNStudents(3);
+        
+        var output = new OutputPrinter();
         output.PrintTopStudents(topStudents);
     }
 }
