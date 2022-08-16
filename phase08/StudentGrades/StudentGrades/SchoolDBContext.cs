@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using project;
 
-namespace DefaultNamespace;
+namespace Repository;
 
 public class SchoolDBContext : DbContext
 {

@@ -1,22 +1,22 @@
 using project;
 
-namespace DefaultNamespace;
+namespace Repository;
 
-public class DBController
+public class DBRepository
 {
     private static SchoolDBContext _schoolContext;
-    private static DBController instance;
+    private static DBRepository instance;
 
-    private DBController()
+    private DBRepository()
     {
         _schoolContext = new SchoolDBContext();
     }
 
-    public static DBController Instance
+    public static DBRepository Instance
     {
         get
         {
-            if (instance == null) instance = new DBController();
+            if (instance == null) instance = new DBRepository();
             return instance;
         }
     }

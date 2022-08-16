@@ -1,4 +1,4 @@
-using DefaultNamespace;
+using Repository;
 
 namespace project;
 
@@ -8,7 +8,7 @@ public class ProgramRunner
     {
         var fileReader = new FileReader();
         var output = new OutputPrinter();
-        var dbController = DBController.Instance;
+        var dbController = DBRepository.Instance;
         var dataParser = new JsonParser();
 
         var studentsData = fileReader.ReadFileFromDisk(@"studentsData.json");
