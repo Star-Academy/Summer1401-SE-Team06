@@ -11,10 +11,9 @@ public class InvertedIndex
 
     private void AddWordToMap(string word, string docId)
     {
-        var wordExists = Map.ContainsKey(word);
         HashSet<string> docIdSet;
 
-        if (wordExists)
+        if (Map.ContainsKey(word))
             docIdSet = Map[word];
         else
             docIdSet = new HashSet<string>();

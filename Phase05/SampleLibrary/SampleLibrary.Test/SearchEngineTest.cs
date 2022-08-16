@@ -27,9 +27,10 @@ public class SearchEngineTest
     {
         var searchInDocs = new SearchInDocs(_dataMap);
         var searched = searchInDocs.search(wordContainer);
-        searched.Should().Contain("3");
-        searched.Should().Contain("5");
-        searched.Should().Contain("7");
+        
+        var expected = new HashSet<string> { "5", "3", "7" };
+
+        searched.Should().Contain(expected);
     }
 
     [Theory]
@@ -39,10 +40,9 @@ public class SearchEngineTest
         var searchInDocs = new SearchInDocs(_dataMap);
         var searched = searchInDocs.search(wordContainer);
 
-        searched.Should().NotContain("1");
-        searched.Should().NotContain("2");
-        searched.Should().NotContain("4");
-        searched.Should().NotContain("6");
+        var unexpected = new HashSet<string> { "1", "2", "4", "6" };
+
+        searched.Should().NotContain(unexpected);
     }
 
     public static IEnumerable<object[]> BuildQueryData()
