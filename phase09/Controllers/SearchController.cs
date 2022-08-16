@@ -8,8 +8,8 @@ namespace ASP.net.Controllers;
 [Route("[controller]/[Action]")]
 public class SearchController : ControllerBase
 {
-    private readonly InvertedIndex _invertedIndex;
     private readonly InputProcessor _inputProcessor;
+    private readonly InvertedIndex _invertedIndex;
     private readonly SearchInDocs _searchInDocs;
 
     public SearchController()
@@ -20,12 +20,11 @@ public class SearchController : ControllerBase
         Console.WriteLine("2");
         var documentsDictionary = fileReader.readFiles();
         Console.WriteLine("3");
-        _invertedIndex = new InvertedIndex(); 
+        _invertedIndex = new InvertedIndex();
         var invertedIndexMaker = new InvertedIndexMaker(documentsDictionary);
         _invertedIndex = invertedIndexMaker.Make(_invertedIndex);
         _inputProcessor = new InputProcessor();
         _searchInDocs = new SearchInDocs(_invertedIndex.Map);
-
     }
 
     [HttpGet]
@@ -36,5 +35,4 @@ public class SearchController : ControllerBase
             _inputProcessor.optional, _inputProcessor.avoided);
         return result;
     }
-
 }
