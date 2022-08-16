@@ -8,6 +8,10 @@ public class InputProcessor
 
     public void Process(string input)
     {
+        optional.Clear();
+        necessary.Clear();
+        avoided.Clear();
+        
         var splittedInput = input.ToUpper().Split(" ");
         foreach (var s in splittedInput)
             if (s.StartsWith("+")) optional.Add(s.Substring(1));

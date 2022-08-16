@@ -19,6 +19,7 @@ public class SearchController : ControllerBase
         var invertedIndexMaker = new InvertedIndexMaker(documentsDictionary);
         var _invertedIndex = invertedIndexMaker.Make(new InvertedIndex());
         _searchInDocs = new SearchInDocs(_invertedIndex.Map);
+        Console.WriteLine("1");
     }
 
     [HttpGet]
