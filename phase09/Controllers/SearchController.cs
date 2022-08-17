@@ -12,14 +12,10 @@ public class SearchController : ControllerBase
     private readonly InputProcessor _inputProcessor;
     private readonly SearchInDocs _searchInDocs;
 
-    public SearchController()
+    public SearchController(IInvertedIndexSearchService searchService, InputProcessor inputProcessor)
     {
-        _inputProcessor = new InputProcessor();
-        var documentsDictionary = new FileReader(FilesDir).readFiles();
-        var invertedIndexMaker = new InvertedIndexMaker(documentsDictionary);
-        var _invertedIndex = invertedIndexMaker.Make(new InvertedIndex());
-        _searchInDocs = new SearchInDocs(_invertedIndex.Map);
-        Console.WriteLine("1");
+        _searchInDocs = searchService.SearchEngine(FilesDir); 
+        _inputProcessor = inputProcessor;
     }
 
     [HttpGet]
