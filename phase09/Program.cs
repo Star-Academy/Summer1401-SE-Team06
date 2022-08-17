@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<InputProcessor>();
+builder.Services.AddSingleton<IInputProcessorService, InputProcessorService>();
 builder.Services.AddSingleton<IInvertedIndexSearchService, InvertedIndexSearchService>();
 var app = builder.Build();
 

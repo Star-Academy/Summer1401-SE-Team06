@@ -9,13 +9,14 @@ namespace ASP.net.Controllers;
 public class SearchController : ControllerBase
 {
     private const string FilesDir = @"EnglishData";
-    private readonly InputProcessor _inputProcessor;
+    private readonly IInputProcessorService _inputProcessor;
     private readonly SearchInDocs _searchInDocs;
 
-    public SearchController(IInvertedIndexSearchService searchService, InputProcessor inputProcessor)
+    public SearchController(IInvertedIndexSearchService searchService, IInputProcessorService inputProcessor)
     {
-        _searchInDocs = searchService.SearchEngine(FilesDir); 
         _inputProcessor = inputProcessor;
+        _searchInDocs = searchService.SearchEngine(FilesDir); 
+        
     }
 
     [HttpGet]
