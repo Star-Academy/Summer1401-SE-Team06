@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <PackageId>StarAcademy.CodeStar1401.Team06.SearchEngine</PackageId>
+        <Authors>Ali Bonaftizadeh - Matin Moradi</Authors>
+        <Company>Star Academy</Company>
+    </PropertyGroup>
+
+</Project>
